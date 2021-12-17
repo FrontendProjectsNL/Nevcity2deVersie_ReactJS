@@ -152,7 +152,7 @@ img {
 }
 
 section {
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .home {
@@ -160,14 +160,17 @@ section {
   padding-bottom: 15px;
 }
 
-.home .container .content-wrapper {
-  padding: 40px 10px 10px;
-  /* height: 90vh; */
-  position: relative;
-  background-color: var(--secondary-bg-color);
-  display: flex;
-  flex-direction: column;
+.about-us {
+  /* padding-top: 70px; */
+  padding-bottom: 15px;
 }
+
+.about-us--images {
+  width: 120px;
+  height: 200px;
+  margin: auto;
+}
+
 /* .home__title em {
   color: var(--secondary-text-color);
 } */
@@ -183,10 +186,27 @@ section {
   background-repeat: no-repeat;
 } */
 
-.home__text-wrapper {
-  margin-bottom: 30px;
+.content-wrapper {
+  padding: 10px;
+  position: relative;
+  background-color: var(--secondary-bg-color);
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  background-color: yellow;
+}
+
+.home .content-wrapper {
+  /* padding: 40px 10px 10px; */
+  background-color: red;
+  height: 80vh;
+}
+
+.about-us--images {
+}
+
+.text-wrapper {
   position: absolute;
-  padding-top: 70px;
   padding-left: 20px;
   padding-right: 20px;
   z-index: 2;
@@ -197,12 +217,33 @@ section {
   display: flex;
   flex-direction: column;
 }
+
+.about-us-text-wrapper {
+  margin-bottom: 30px;
+  position: absolute;
+  padding-top: 70px;
+  padding-left: 20px;
+  padding-right: 20px;
+  z-index: 200;
+  text-align: center;
+  top: 10px;
+  left: 10px;
+  height: 100%;
+  /* background-color: rgba(255, 255, 255, 0.75); */
+}
+.home__title {
+  padding-top: 50px;
+}
 .home__title span {
   font-weight: 700;
   color: var(--primary);
 }
 .home__text {
   margin-bottom: 27px;
+  max-width: 440px;
+  width: 100%;
+}
+.about-us-text {
   max-width: 440px;
   width: 100%;
 }
@@ -225,16 +266,15 @@ section {
   transform: scale(0.9);
 }
 .home__button-wrapper {
-  position: absolute;
-  bottom: 125px;
+  margin-top: -10px;
 }
 
 .benefits {
   margin-top: 50px;
+  padding-top: 70px;
   text-align: left;
   line-height: 2.8;
   font-weight: bold;
-  margin-bottom: 150px;
 }
 
 .benefits i {
