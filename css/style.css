@@ -1,0 +1,248 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+:root {
+  /*
+dk kleuren: 
+bg: #fff en #FAFAFA
+#56B1D4
+#75BBDA
+
+  */
+  --primary-bg-color: #fafafa;
+  --secondary-bg-color: #fff;
+  --primary-text-color: #67686a;
+  --secondary-text-color: #17191c;
+  --hamburger-menu-color: #56b1d4;
+  --btn-bg-color: #56b1d4;
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --btn-border: #cfe0ff;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+}
+
+body {
+  min-height: 100%;
+  padding-top: 65px;
+  background-color: var(--primary-bg-color);
+  line-height: 1.4;
+  color: var(--primary-text-color);
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+}
+
+.h1 {
+  font-size: 30px;
+}
+.h2 {
+  font-size: 26px;
+}
+.h3 {
+  font-size: 22px;
+}
+.h4 {
+  font-size: 18px;
+}
+.text-xxl {
+  font-size: 32px;
+}
+.text-lg {
+  font-size: 20px;
+}
+.text-md {
+  font-size: 16px;
+}
+.text-sm {
+  font-size: 14px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navbar {
+  padding: 0 0 10px;
+  box-shadow: 0 2px 15px 0 rgb(173 201 255 / 40%);
+  min-height: 65px;
+  width: 100%;
+  /* background-color: var(--secondary-bg-color); */
+  background-color: var(--secondary-bg-color);
+  transition-duration: 200ms;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--primary-text-color);
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.navbar .container {
+  /* margin-right: 35px;
+  margin-left: 15px; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+.logo {
+  height: 58px;
+  width: 80px;
+}
+
+.hamburger-menu {
+  width: 32px;
+  height: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.line {
+  width: inherit;
+  height: 3px;
+  background-color: var(--hamburger-menu-color);
+  border-radius: 25px;
+  transform-origin: right;
+  transition: transform 500ms;
+}
+
+.line2 {
+  height: 2px;
+}
+
+#hamburger-checkbox {
+  width: 80px;
+  height: 65px;
+  position: absolute;
+  right: -5px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 100;
+}
+
+#hamburger-checkbox:checked ~ .hamburger-wrapper .line2 {
+  transform: translate(5px, 20px);
+}
+#hamburger-checkbox:checked ~ .hamburger-wrapper .line1 {
+  transform: rotateZ(-45deg);
+}
+#hamburger-checkbox:checked ~ .hamburger-wrapper .line3 {
+  transform: rotateZ(45deg);
+}
+
+section {
+  overflow: hidden;
+}
+
+.home {
+  /* padding-top: 70px; */
+  padding-bottom: 15px;
+}
+
+.home .container .content-wrapper {
+  padding: 40px 10px 10px;
+  /* height: 90vh; */
+  position: relative;
+  background-color: var(--secondary-bg-color);
+  display: flex;
+  flex-direction: column;
+}
+/* .home__title em {
+  color: var(--secondary-text-color);
+} */
+.home-img {
+  object-fit: contain;
+  object-position: top right;
+}
+
+/* .home {
+  background: linear-gradient(rgb(72, 0, 72, 0.8), rgb(192, 72, 72, 0.8)),
+    url(../img/foto_frontendNew.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+} */
+
+.home__text-wrapper {
+  margin-bottom: 30px;
+  position: absolute;
+  padding-top: 70px;
+  padding-left: 20px;
+  padding-right: 20px;
+  z-index: 2;
+  text-align: center;
+  top: 10px;
+  left: 10px;
+  background-color: rgba(255, 255, 255, 0.75);
+  display: flex;
+  flex-direction: column;
+}
+.home__title span {
+  font-weight: 700;
+  color: var(--primary);
+}
+.home__text {
+  margin-bottom: 27px;
+  max-width: 440px;
+  width: 100%;
+}
+
+.btn {
+  text-align: center;
+  padding: 12px 40px;
+  font-weight: 400;
+  line-height: 1.1;
+  background-color: var(--btn-bg-color);
+  border-radius: 50px;
+  cursor: pointer;
+  color: #fff;
+  z-index: 1;
+  display: inline-block;
+  transition: transform 300ms;
+}
+.btn:hover {
+  /* transform: scale(0.5); */
+  transform: scale(0.9);
+}
+.home__button-wrapper {
+  position: absolute;
+  bottom: 125px;
+}
+
+.benefits {
+  margin-top: 50px;
+  text-align: left;
+  line-height: 2.8;
+  font-weight: bold;
+  margin-bottom: 150px;
+}
+
+.benefits i {
+  margin-right: 10px;
+}
+
+@media (min-width: 1200px) {
+  container {
+    max-width: 1140px;
+  }
+}
