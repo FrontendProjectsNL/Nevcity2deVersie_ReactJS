@@ -191,7 +191,8 @@ section {
 .about-us,
 .home,
 .stats,
-.passed {
+.passed,
+students {
   /* padding-top: 70px; */
   padding-bottom: 15px;
 }
@@ -407,10 +408,6 @@ section {
   border-radius: 5px;
 }
 
-.euro {
-  color: red;
-}
-
 .passed--images {
   width: 100%;
 }
@@ -439,6 +436,270 @@ section {
   transform: translateY(0px);
   transform: translateX(0);
 }
+
+.card-wrapper {
+  padding: 90px;
+  max-width: 1000px;
+  margin: auto;
+  display: grid;
+  justify-content: center;
+  /* Om multiple items te centreren gap in combinatie met justify-content MOET gebruikt worden!!!!! */ 
+  gap: 12px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+
+}
+.price-card {
+  background-color: #fff;
+  /* margin: 10px;
+  padding: 20px 0 20px; */
+  padding-top: 20px;
+  display: grid;
+  grid-template-rows: repeat(12, 50px);
+  border: 1px solid #ddd;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.4);
+  position: relative;
+   
+}
+
+.price-card div {
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.price {
+  grid-row: span 2;
+ 
+}
+.price p {
+  font-size: 60px;
+  color: rgb(33, 150, 243);
+  position: relative;
+}
+.price p::before {
+  content: '€';
+  position: absolute;
+  top: 20px;
+  left: -15px;
+  color: rgb(33, 150, 243);
+  font-size: 24px;
+}
+
+.plan-title h3 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.item {
+  background: rgb(245, 245, 245);
+}
+.item:nth-child(2n+1) {
+  background: rgb(238, 238, 238);
+}
+
+.item i {
+  margin-left: 10px;
+  margin-right: 2px;
+}
+.fa-times {
+  color: rgb(244, 67, 54);
+}
+
+.price-card:nth-of-type(2) .price p,
+.price-card:nth-of-type(2) .price p::before{
+  color: rgb(244, 67, 54);
+}
+
+.price-card:nth-of-type(3) .price p,
+.price-card:nth-of-type(3) .price p::before{
+  color: rgb(255, 193, 7);
+}
+
+.btn-row {
+  grid-row: span 2;
+  display: grid;
+  align-items: start;
+}
+
+.btn-plan {
+  color: #2196F3;
+  border: 3px solid rgb(33, 150, 243);
+  transition: background 100ms ease-in-out;
+  padding: 15px 25px;
+  border-radius: 50px;
+  font-weight: bold;
+ 
+}
+.btn-plan:hover {
+    color: rgb(255, 255, 255);
+    background: rgb(33, 150, 243);
+    border-color: rgb(33, 150, 243);
+    padding: 15px 25px;
+    border-radius: 50px;
+    font-weight: bold;
+   
+}
+.btn-plan i {
+  
+  margin-left: 10px;
+  transition: opacity 300ms;
+   
+}
+.btn-plan:hover i {
+  animation: btn-arrow-animation 800ms infinite;
+}
+
+@keyframes btn-arrow-animation {
+  0% {
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(10px);
+  }
+}
+
+/* Styles voor mijn carousel (geslaagde leerlingen): */
+
+.students {
+  margin-top: -35px ;
+}
+.students .container {
+  max-width: 900px;
+  margin: auto;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel-wrapper {
+  width: 100%;
+  height: 80vh;
+  position: relative;
+  box-shadow: 0 0 5px rgba(0, 0, 0, .4);
+}
+.carouselContainer {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%,-70%);
+  width: 50vw;
+  height: 50vh;
+}
+
+.carousel-wrapper h2 {
+  /* text-align: center; */
+  padding-top: 80px;
+  /* display: inline-block; */
+  
+  display: flex;
+  justify-content: center;  
+}
+
+.carousel-wrapper h2::after {
+  content: '';
+  width: 100px;
+  height: 10px;
+  background: blue;
+  display: block;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.carousel__panel {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 25%;
+  width: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  font-family: sans-serif;
+  font-size: 3vw;
+  font-weight: 100;
+  letter-spacing: 0.4em;
+  line-height: 50vh;
+  text-align: center;
+  text-shadow: 0px 0px 8px black;
+  text-transform: uppercase;
+  transition: transform 0.5s, opacity 0.3s;
+}
+
+.carousel__panel.static {
+  transition: none;
+}
+
+.carousel__panel--outView {
+  opacity: 0;
+}
+
+.carousel__panel--inView {
+  opacity: 1;
+}
+
+.carousel__panel--inView.carousel__panel--left {
+  transform: translate(-50%) scale(0.75);
+  opacity: 0.5;
+}
+
+.carousel__panel--inView.carousel__panel--right {
+  transform: translate(50%) scale(0.75);
+  opacity: 0.5;
+}
+
+.carousel__panel--inView.carousel__panel--center {
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.carousel__panel--outView.carousel__panel--left {
+  opacity: 0;
+  transform: translate(-150%) scale(0.75);
+}
+
+.carousel__panel--outView.carousel__panel--right {
+  opacity: 0;
+  transform: translate(150%) scale(0.75);
+}
+
+.carousel__arrow {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  color: #fff;
+  font-size: 4vw;
+  line-height: 50vh;
+  text-align: center;
+  text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+  opacity: 0.2;
+  z-index: 2;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.carousel__arrow--right {
+  right: 0;
+}
+
+.carousel__arrow:hover {
+  opacity: 0.8;
+}
+
+#item1, #item2, #item3 {
+  cursor: pointer;
+} 
+#item2 {
+  transform: scale(1.15);
+  z-index: 3;
+
+}
+
 @media screen and (min-width: 1200px) {
   container {
     max-width: 1140px;
