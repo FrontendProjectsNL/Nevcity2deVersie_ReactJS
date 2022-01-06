@@ -11,6 +11,23 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/utilities.css">
     <title>Nevcity Versie2</title>
+    <script>
+        // Initialize and add the map
+        function initMap() {
+          // The location of Uluru
+          const uluru = { lat: 52.410670, lng: 4.925610 };
+          // The map, centered at Uluru
+          const map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 14,
+            center: uluru,
+          });
+          // The marker, positioned at Uluru
+          const marker = new google.maps.Marker({
+            position: uluru,
+            map: map,
+          });
+        }
+      </script>
 </head>
 <body>
     <nav class="navbar">
@@ -32,7 +49,7 @@
         <div class="container">
             <div class="home-wrapper">
                 <div class="home-img"><img src="./img/nevcity4.jpg" alt=""> </div>
-                <div class="text-wrapper">
+                <div class="text-wrapper home-text">
                     <h1 class="h1 home__title"><span>Kwalitatieve Rijlessen — </span><em>Snel en voordelig rijbewijs halen!</em></h1>  
                     <div class="home__text">
                         <ul class="benefits">
@@ -50,7 +67,7 @@
         </div>
     </section>
 
-    <section class="about-us">
+    <section id="about-us">
         <div class="container">
             <div class="about-us-wrapper">
                 <div class="about-us--images">
@@ -253,11 +270,65 @@ super snel halen.
         </div>
     </section>
 
-    <section class="students">
+    <!-- <section id="students">
         <div class='container'>
             <div class="carousel-wrapper">
                 <h2>Voorbeelden van een paar van onze geslaagde leerlingen!</h2>
                 <div class='carouselContainer'></div>
+            </div>
+        </div>
+    </section> -->
+    <section id="students">
+        <h2>Voorbeelden van een paar van onze geslaagde leerlingen!</h2>
+        <div id="succeeded-students">
+            <div class="slider-container">
+                <div class="slider">
+                    <div class="slide">
+                        <img src="./img/nevc1.jpg" alt="" />
+                      </div>
+                      <div class="slide">
+                        <img src="./img/nevc2.jpg" alt="" />
+                      </div>
+                      <div class="slide">
+                        <img src="./img/nevc3.jpg" alt="" />
+                      </div>
+                      <div class="slide">
+                        <img src="./img/nevc4.jpg" alt="" />
+                      </div>
+                      <div class="slide">
+                        <img src="./img/nevc5.jpg" alt="" />
+                      </div>
+                      <div class="slide">
+                        <img src="./img/nevc6.jpg" alt="" />
+                      </div>
+                      <div class="slide">
+                        <img src="./img/nevc7.jpg" alt="" />
+                      </div>
+                      <div class="slide">
+                        <img src="./img/nevc8.jpg" alt="" />
+                      </div>
+                      <div class="slide">
+                        <img src="./img/nevc9.jpg" alt="" />
+                      </div>
+                      <div class="slide">
+                        <img src="./img/nevc10.jpg" alt="" />
+                      </div>
+                      <div class="slide">
+                        <img src="./img/nevc11.jpg" alt="" />
+                      </div>
+                      <div class="slide">
+                        <img src="./img/nevc12.jpg" alt="" />
+                      </div>
+                      <div class="slide">
+                        <img src="./img/nevc13.jpg" alt="" />
+                      </div>
+                      <div class="slide">
+                        <img src="./img/nevc14.jpg" alt="" />
+                      </div>
+                      <div class="slide">
+                        <img src="./img/nevc15.jpg" alt="" />
+                      </div>
+                </div>
             </div>
         </div>
     </section>
@@ -284,11 +355,13 @@ super snel halen.
         </div>
     </section>
 
+     -->
+
     <section class="footer">
         <div class="container">
             <div class="footer-wrapper">
-                <div class="text-wrapper">
-                  <div class="contact-form">
+                <!-- <div class="text-wrapper"> -->
+                  <!-- <div class="contact-form">
                         <form action="">
                             <input type="text" class="name" placeholder="Uw Naam" required>
                             <input type="tel" class="tel" placeholder="Uw mobiele nummr" required>
@@ -296,36 +369,55 @@ super snel halen.
                             <textarea class="bericht" placeholder="Uw bericht" rows="4" cols="50"> </textarea>
                             <button type="submit" >Verzenden</button> 
                         </form>
-                    </div>
+                    </div> -->
                     
-                        <iframe class="googlemap" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9735.373876601325!2d4.922496272460939!3d52.40951307635619!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9db58af990a6593e!2sNevcity!5e0!3m2!1snl!2snl!4v1639772932002!5m2!1snl!2snl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                    
-                    <div class="home__text-wrapper">
-                        <h2>Moet Nog Gemaakt Worden, ben bezi.  Rijschool Nevcity</h2>
+                    <h3>My Google Maps Demo</h3>
+    <!--The div element for the map -->
+    <div id="map"></div>
+
+                <div class="footer-info">
+
+                    <div class="text-wrapper">
+                        <h2>Rjschool Nevcity</h2>
                       <p>
                         Moet Nog Gemaakt Worden, ben bezi. Moet Nog Gemaakt Worden, ben bezi. Moet Nog Gemaakt Worden, ben bezi. 
 
                       </p> 
                     </div>
-                    <div class="home__text-wrapper">
-                        <h2>Moet Nog Gemaakt Worden, ben bezi. Over Ons</h2>
-                      <p>
-                        Moet Nog Gemaakt Worden, ben bezi. Moet Nog Gemaakt Worden, ben bezi. 
-                        Moet Nog Gemaakt Worden, ben bezi. Moet Nog Gemaakt Worden, ben bezi. Moet Nog Gemaakt Worden, ben bezi. 
-                      </p> 
+                    <div class="text-wrapper">
+                        <h2>Over Ons</h2>
+                    <p>
+                        <a href="#about-us">Rijschool Nevcity</a>
+                    </p> 
+                    <p>
+                        <a href="#students">Geslaagden</a>
+                    </p> 
+                    <p>
+                        <a href="mailto:info@nevcity.nl">Proefles</a>
+                    </p> 
                     </div>
-                    <div class="home__text-wrapper">
-                        <h2>Moet Nog Gemaakt Worden, ben bezi. Contactgegevens</h2>
+                    <div class="text-wrapper">
+                        <h2>Contactgegevens</h2>
                       <p>
-                        Moet Nog Gemaakt Worden, ben bezi. Moet Nog Gemaakt Worden, ben bezi. 
-                        Moet Nog Gemaakt Worden, ben bezi. Moet Nog Gemaakt Worden, ben bezi. 
+                        <p>
+                            Masthof 128
+                        </p>
+                        <p>
+                            1034 NJ Amsterdam
+                        </p>
+                        <p>
+                            06 34559087
+                        </p>
+                        <p>
+                            info@nevcity.nl
+                        </p>
                       </p> 
                     </div>
 
-                    <div class="home__text-wrapper">
+                    <div class="text-wrapper">
                         <h2>Social Media Links</h2>
                      
-                        <ul>
+                        <ul class="footer-social-links">
                             <li><i class="fab fa-facebook"></i></li>
                             <li><i class="fab fa-instagram"></i></li>
                             <li><i class="fab fa-twitter"></i></li>
@@ -335,9 +427,14 @@ super snel halen.
                       </p>
                     </div>
                 </div>
+                <!-- </div> -->
             </div>
         </div>
-    </section> -->
+    </section>
     <script src="./js/app.js"></script>
+    <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkJEqBHq5l-mTBEAeiIPlKqBeLhxr4O0s&callback=initMap&libraries=&v=weekly&channel=2"
+    async
+  ></script>
 </body>
 </html>

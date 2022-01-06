@@ -164,7 +164,7 @@ stats3Observer.observe(stats3[0]);
 /* Mijn carousel: */
 
 var Tripousel = function (options) {
-	// because `this` is a bitch
+
 	var _this = this;
 	
 	
@@ -329,17 +329,21 @@ var Tripousel = function (options) {
 		
 		// Assign inline styles and content
 		Object.assign(elements.panels.inViewLeft.style, {
-			backgroundImage: 'url("' + _this.items[_this.left].image + '")'
+			backgroundImage: 'url("' + _this.items[_this.left].image + '")',
+			backgroundSize: 'contain',
 		});
 		// elements.panels.inViewLeft.innerHTML = _this.items[_this.left].copy;
 		
 		Object.assign(elements.panels.inViewCenter.style, {
-			backgroundImage: 'url("' + _this.items[_this.center].image + '")'
+			backgroundImage: 'url("' + _this.items[_this.center].image + '")',
+			backgroundSize: 'contain',
 		});
 		// elements.panels.inViewCenter.innerHTML = _this.items[_this.center].copy;
 		
 		Object.assign(elements.panels.inViewRight.style, {
-			backgroundImage: 'url("' + _this.items[_this.right].image + '")'
+			backgroundImage: 'url("' + _this.items[_this.right].image + '")',
+			backgroundSize: 'contain',
+			
 		});
 		// elements.panels.inViewRight.innerHTML = _this.items[_this.right].copy;
 		
@@ -478,6 +482,7 @@ const mouseTargetItem3 = document.getElementById('item3');
 
 mouseTargetItem1.addEventListener('mouseenter', e => {
     mouseTargetItem1.style.transform = 'scale(1.15)';
+	// mouseTargetItem1.style.boxShadow = '0 0 10px #000';
 	mouseTargetItem1.style.zIndex = '4';
 
 	mouseTargetItem2.style.transform = 'scale(1)';
@@ -513,6 +518,7 @@ mouseTargetItem1.addEventListener('mouseleave', e => {
 
 	mouseTargetItem3.addEventListener('mouseenter', e => {
     mouseTargetItem3.style.transform = 'scale(1.15)';
+	// mouseTargetItem3.style.boxShadow = '0 0 10px #000';
 	mouseTargetItem3.style.zIndex = '4';
 
 	mouseTargetItem2.style.transform = 'scale(1)';
@@ -534,19 +540,13 @@ mouseTargetItem3.addEventListener('mouseleave', e => {
   });
 
 
-  mouseTargetItem2.addEventListener('mouseenter', e => {
-    mouseTargetItem2.style.boxShadow = '0 0 10px #DAA520';
- 
-
-    // mouseTargetItem2.style.border = '5px solid orange';
-    // mouseTargetItem2.style.transform = 'scale(1.2)';
-
-});
-
-mouseTargetItem2.addEventListener('mouseleave', e => {
-    mouseTargetItem2.style.boxShadow = 'none';
-
-    // mouseTargetItem2.style.border = '1px solid #333';
-    // mouseTargetItem2.style.transform = 'scale(1)';
-    
-  });
+ // To prevent #item2 being 1.15 bigger on smartphones en tablets:
+ function myFunction(x) {
+	if (x.matches) { // If media query matches
+		mouseTargetItem2.style.transform = 'scale(1)'
+	} 
+  }
+  
+  var x = window.matchMedia("(max-width: 700px)")
+  myFunction(x) // Call listener function at run time
+  x.addListener(myFunction) // Attach listener function on state changes
