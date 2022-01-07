@@ -147,14 +147,24 @@ img {
 .menu-links {
   visibility: hidden;
   position: absolute;
-  top: 50vh;
-  left: 50vw;
-  transform: translate(-50%, -50%);
-   
+  top: 20%;
+  left: 30%;
+  /* transform: translate(-50%, -120%); */
+  transform: translate(-30%, -20%);
+  transform: scale(0);
+  transition: transform 300ms;
 }
-.menu-links a {
-  font-size: 60px;
+.link-item {
+  font-size: 24px;
+  line-height: 44px;
+  color: var(--light);
+  border-bottom: 1px solid #ddd;
 }
+
+/* .link-item:hover {
+  border-bottom: 1px solid var(--primary);
+} */
+
 
 .hamburger-wrapper {
   position: absolute;
@@ -204,6 +214,8 @@ img {
 
 #hamburger-checkbox:checked ~ .menu .menu-links {
   visibility: visible;
+  /* transform: translate(-50%, -50%); */
+  transform: scale(1);
 
 }
 
@@ -225,7 +237,7 @@ section {
 }
 
 #about-us,
-.home,
+#home,
 #stats,
 .passed,
 #students {
@@ -652,7 +664,7 @@ section {
   align-items: center;
 }
 
-.footer .container {
+#footer .container {
   min-height: 100vh;
   max-width: 900px;
 }
