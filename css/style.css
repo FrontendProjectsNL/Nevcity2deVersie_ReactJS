@@ -140,6 +140,7 @@ img {
   height: 58px;
   width: 80px;
   margin-top: 10px;
+  padding-left: 10px;
 }
 .menu {
   position: absolute;
@@ -169,6 +170,7 @@ img {
 .hamburger-wrapper {
   position: absolute;
   right: 0;
+  padding-right: 10px;
   z-index: 99;
 }
 
