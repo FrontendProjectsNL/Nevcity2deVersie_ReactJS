@@ -1,0 +1,312 @@
+@import url("./floatAnimation.css");
+@import url("./style.css");
+
+/* .fixed-contact-icons {
+  
+    position: fixed;
+    bottom: 90px;
+    right: 35px;
+    transform: translateY(180px) scale(0);
+    visibility: hidden;
+    opacity: 0;
+    transition: transform 300ms ease-in-out, opacity 300ms ease-in-out;
+} */
+/* .fixed-contact-icons {
+  visibility: hidden;
+  opacity: 0;
+} */
+.fixed-contact-icons div {
+  position: fixed;
+  /* bottom: 90px;
+  right: 35px;
+  transform: translateY(180px) scale(0);
+  visibility: hidden;
+  opacity: 0;
+  transition: transform 300ms ease-in-out, opacity 300ms ease-in-out; */
+  visibility: hidden;
+  opacity: 0;
+}
+
+.fixed-contact-icons div:nth-of-type(5) {
+  bottom: 110px;
+  right: 35px;
+}
+.fixed-contact-icons div:nth-of-type(4) {
+  bottom: 165px;
+  right: 35px;
+}
+.fixed-contact-icons div:nth-of-type(3) {
+  bottom: 215px;
+  right: 35px;
+}
+.fixed-contact-icons div:nth-child(2) {
+  bottom: 265px;
+  right: 35px;
+}
+.fixed-contact-icons div:nth-of-type(1) {
+  bottom: 315px;
+  right: 35px;
+}
+
+.ellipsis-wrapper {
+  position: fixed;
+  font-size: 35px;
+  /* width: 100vw;
+  height: 100vh; */
+  z-index: 99;
+  bottom: 0;
+  right: 0;
+}
+#myEllipsisCheckbox {
+  position: fixed;
+  font-size: 35px;
+  z-index: 1001;
+  bottom: 0;
+  right: 0;
+  width: 90px;
+  height: 90px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.times {
+  font-size: 38px;
+  color: #e6e6e6;
+  position: fixed;
+  bottom: 30px;
+  right: 45px;
+  cursor: pointer;
+  z-index: 1000;
+  opacity: 0;
+}
+
+.ellipsis-h {
+  display: inline-block;
+  font-size: 38px;
+  color: var(--hamburger-menu-color);
+  position: fixed;
+  bottom: 25px;
+  right: 35px;
+  cursor: pointer;
+  z-index: 1000;
+  animation: float-animation 12000ms ease-in-out 6000ms infinite;
+}
+.bg-overlay {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10%;
+  width: 0%;
+  height: 0%;
+  opacity: 0;
+  transition: opacity 200ms;
+}
+
+#myEllipsisCheckbox:checked ~ .ellipsis-wrapper {
+  width: 100vw;
+  height: 100vh;
+}
+
+#myEllipsisCheckbox:checked + .bg-overlay {
+  opacity: 1;
+  top: -200%;
+  left: -200%;
+  width: 400%;
+  height: 400%
+}
+
+#myEllipsisCheckbox:checked ~ .ellipsis-h {
+  opacity: 0;
+}
+
+#myEllipsisCheckbox:checked ~ .times {
+  opacity: 1;
+}
+
+/* #myEllipsisCheckbox:checked ~ .fixed-contact-icons {
+    transition: transform 300ms ease-in-out, opacity 300ms ease-in-out;
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(-20px) scale(1);    
+  } */
+
+#myEllipsisCheckbox:checked ~ .fixed-contact-icons div:nth-of-type(5) {
+  opacity: 1;
+  animation: iconScale 600ms ease-in-out forwards;
+  animation-delay: 2800ms;
+}
+
+#myEllipsisCheckbox:checked ~ .fixed-contact-icons div:nth-of-type(4) {
+  opacity: 1;
+  animation: iconScale 600ms ease-in-out forwards;
+  animation-delay: 2100ms;
+}
+
+#myEllipsisCheckbox:checked ~ .fixed-contact-icons div:nth-of-type(3) {
+  opacity: 1;
+  animation: iconScale 600ms ease-in-out forwards;
+  animation-delay: 1400ms;
+}
+
+#myEllipsisCheckbox:checked ~ .fixed-contact-icons div:nth-child(2) {
+  opacity: 1;
+  animation: iconScale 600ms ease-in-out forwards;
+  animation-delay: 700ms;
+}
+
+#myEllipsisCheckbox:checked ~ .fixed-contact-icons div:nth-of-type(1) {
+  /* transition: transform 3000ms ease-in-out, opacity 300ms ease-in-out; */
+  opacity: 1;
+  animation: iconScale 600ms ease-in-out forwards;
+}
+
+/* 
+  .fa-facebook {
+    color: #fff;
+    font-size: 22px;
+  }
+  .facebook .fa-circle {
+    color: #4267b2;
+    font-size: 44px;
+  }
+  
+  .instagram .fa-circle {
+    color: transparent;
+    background: radial-gradient(
+      circle at 30% 107%,
+      #fdf497 0%,
+      #fdf497 5%,
+      #fd5949 45%,
+      #d6249f 60%,
+      #285aeb 90%
+    );
+    background: -webkit-radial-gradient(
+      circle at 30% 107%,
+      #fdf497 0%,
+      #fdf497 5%,
+      #fd5949 45%,
+      #d6249f 60%,
+      #285aeb 90%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+  
+  .whatsapp .fa-circle {
+    color: transparent;
+    background: linear-gradient(#25d366, #25d366) 14% 84%/16% 16% no-repeat,
+      radial-gradient(#25d366 60%, transparent 0);
+  }
+  
+  .phone-icon .fa-circle {
+    color: transparent;
+    background: radial-gradient(#00cc00 60%, transparent 0);
+  }
+  
+  .email-icon .fa-circle {
+    color: transparent;
+    background-color: #ea4335;
+    background-clip: text;
+    -webkit-background-clip: text;
+    
+  }
+  
+  .whatsapp {
+    font-size: 22px;
+  } */
+
+.circle {
+  border-radius: 50%;
+  margin: 0.15em;
+  font-size: 3em;
+}
+.fa-instagram {
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  background: -webkit-radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  color: #ffffff;
+  font-size: 22px;
+  padding: 10px;
+}
+.fa-facebook {
+  background: #4267b2;
+  color: #ffffff;
+  font-size: 22px;
+  padding: 10px;
+}
+.whatsapp-fixed {
+  /* background: linear-gradient(#25d366, #25d366) 14% 84%/16% 16% no-repeat,
+    radial-gradient(#25d366 60%, transparent 0); */
+  background-color: green;
+  color: #ffffff;
+
+  padding: 10px;
+}
+.whatsapp .circle {
+  font-size: 27px;
+}
+.fa-whatsapp {
+  /* background: linear-gradient(#25d366, #25d366) 14% 84%/16% 16% no-repeat,
+    radial-gradient(#25d366 60%, transparent 0); */
+  background-color: green;
+  color: #ffffff;
+  font-size: 22px;
+  padding: 10px;
+}
+.fa-envelope {
+  background: #d93e06;
+  color: #ffffff;
+  font-size: 22px;
+  padding: 10px;
+}
+.fa-phone {
+  background: #0ba74a;
+  color: #ffffff;
+  font-size: 22px;
+  padding: 10px;
+}
+
+@keyframes iconScale {
+  /* 0%{
+    transform: scale(0);
+  }
+  20% {
+    transform: scale(1.5);
+  }
+  40%{
+    transform: scale(0);
+  }
+  60%{
+    transform: scale(1.5);
+  }
+  80%{
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  } */
+  0% {
+    visibility: visible;
+    transform: translateY(600px);
+  }
+  50% {
+  }
+  100% {
+    transform: scale(-150px);
+    visibility: visible;
+  }
+}

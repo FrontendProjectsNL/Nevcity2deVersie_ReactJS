@@ -45,6 +45,12 @@ body {
   font-size: 14px;
 
 }
+
+.myHeader {
+  width: 1100px;
+  position: relative;
+  margin: auto;
+}
 /* 
 h1 {
   font-size: 30px;
@@ -121,11 +127,17 @@ a {
   position: fixed;
   top: 0;
   left: 0;
+  right: 0;
+  
 }
 
-.navbar .container {
+.navbar-container {
   /* margin-right: 35px;
   margin-left: 15px; */
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -666,9 +678,10 @@ section {
   align-items: center;
 }
 
-#footer .container {
+.footer-container {
   min-height: 100vh;
   max-width: 900px;
+  margin: auto;
 }
 
 /* Carousel Container */

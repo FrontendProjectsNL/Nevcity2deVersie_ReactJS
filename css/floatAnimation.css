@@ -1,0 +1,4 @@
+@keyframes float-animation{
+    0%, 25%, 45%, 100%{transform:translatey(0) rotate(0)}
+    35%{transform:translatey(-25px) rotate(360deg)}
+}
