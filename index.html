@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="./css/utilities.css">
     <link rel="stylesheet" href="./css/floatAnimation.css">
     <link rel="stylesheet" href="./css/ellipsis.css">
-    <title>Nevcity Versie2</title>
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+    <title>Rijschool Nevcity</title>
     <script>
         // Initialize and add the map
         function initMap() {
@@ -32,456 +33,359 @@
       </script>
 </head>
 <body>
-    <section class="myHeader">
+    <header>
     <nav class="navbar">
-        <nav class="navbar-container">
-            <div class="logo">
-                <a href="#" ><img src="./img/nevcity_logo.png" alt=""></a>
+        <nav class="navbar__container">
+            <div class="navbar_logo">
+                <a href="http://nevcity.nl" ><img src="./img/nevcity_logo.png" alt=""></a>
             </div>
-            <input type="checkbox" name="" id="hamburger-checkbox">
-            <div class="hamburger-wrapper">
-                <div class="hamburger-menu">
-                    <div class="line line1"></div>
-                    <div class="line line2"></div>
-                    <div class="line line3"></div>
+            <input type="checkbox" name="" class="navbar__hamburger-checkbox">
+            <div class="navbar__hamburger-wrapper">
+                <div class="navbar__hamburger-menu">
+                    <div class="navbar__line navbar__line1"></div>
+                    <div class="navbar__line navbar__line2"></div>
+                    <div class="navbar__line navbar__line3"></div>
                 </div>
             </div> 
-            <div class="menu">
-                <ul class="menu-links">
-                    <li><a href="#home" id="link1" class="link-item">Home</a></li>
-                    <li><a href="#price-section" class="link-item">Rijlespakketten</a></li>
-                    <li><a href="#stats" class="link-item">Stats</a></li>
-                    <li><a href="#students" class="link-item">Geslaagden</a></li>
-                    <li><a href="#about-us" class="link-item">Over Ons</a></li>
-                    <li><a href="#footer" class="link-item">Contact</a></li>
+            <div class="navbar__menu">
+                <ul class="navbar__menu-links">
+                    <li><a href="#home" id="link1" class="navbar__link-item">Home</a></li>
+                    <li><a href="#price-section" class="navbar__link-item">Rijlespakketten</a></li>
+                    <li><a href="#stats" class="navbar__link-item">Stats</a></li>
+                    <li><a href="#students" class="navbar__link-item">Geslaagden</a></li>
+                    <li><a href="#about-us" class="navbar__link-item">Over Ons</a></li>
+                    <li><a href="#footer" class="navbar__link-item">Contact</a></li>
                 </ul>
             </div>             
         </nav>
-    </section>
-    <section class="home">
-        <div class="wrapper">
-            <div class="home-wrapper">
-                <div class="home-img"><img src="./img/nevcity4.jpg" alt=""> </div>
-                <div class="text-wrapper home-text">
-                    <h1 class="h1 home__title"><span>Kwalitatieve Rijlessen — </span><em>Snel en voordelig rijbewijs halen!</em></h1>  
-                    <div class="home__text">
-                        <ul class="benefits">
-                            <li><i class="fas fa-check"></i>Betaalbare lespakketten</li>
-                            <li><i class="fas fa-check"></i>Deskundige rij-instructeurs</li>
-                            <li><i class="fas fa-check"></i>Hoge slagingspercentage</li>
-                            <li><i class="fas fa-check"></i>Geduldig en Professioneel</li>
-                        </ul>
+    </header>
+    <main>
+        <section class="home">
+                <div class="home__container">
+                    <div class="home__img"><img src="./img/nevcity4.jpg" alt=""> </div>
+                    <div class="home__text-wrapper">
+                        <h1 class="home__title"><span>Kwalitatieve Rijlessen — </span><em>Snel en voordelig rijbewijs halen!</em></h1>  
+                        <div class="home__benefits-wrapper">
+                            <ul class="home__benefits">
+                                <li><i class="fas fa-check"></i>Betaalbare lespakketten</li>
+                                <li><i class="fas fa-check"></i>Deskundige rij-instructeurs</li>
+                                <li><i class="fas fa-check"></i>Hoge slagingspercentage</li>
+                                <li><i class="fas fa-check"></i>Geduldig en Professioneel</li>
+                            </ul>
+                        </div>
+                        <div class="home__button-wrapper">
+                          <a href="https://api.whatsapp.com/send?phone=31634559087&text=%20%20" class="home__btn">Proefles Aanvragen!</a>
+                        </div>
                     </div>
-                    <div class="home__button-wrapper">
-                      <a href="https://api.whatsapp.com/send?phone=31634559087&text=%20%20" class="btn">Proefles Aanvragen!</a>
+                </div>
+        </section>
+        <section id="about-us">
+                <div class="about-us__card">
+                    <div class="about-us__image">
+                        <img  src="./img/rijschool_nevcity2.gif" alt="">
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="about-us">
-        <div class="wrapper">
-            <div class="about-us-wrapper">
-                <div class="about-us--images">
-                    <img  src="./img/rijschool_nevcity2.gif" alt="">
-                </div>
-                <div class="about-us-text-wrapper"> 
-                    <h2 class="title">Rijschool Nevcity</h2>
-                  <p>
-                    Rijschool Nevcity is dé rijschool in Amsterdam en omgeving.
-                    Wij geven zowel door de weeks als in het weekend les.
-                    Haal nu gemakkelijk en snel je rijbewijs bij NevCity rijschool!
-                    Vraag nu bij ons gratis en vrijblijvend intakegesprek en proefles aan.
-                  </p> 
-                </div>
-            </div>
-            <div class="about-us-wrapper">
-                <div class="about-us--images">
-                    <img  src="./img/rijschool_nevcity3.gif" alt="">
-                </div>
-                <div class="about-us-text-wrapper"> 
-                <h2 class="title">Goedkope <br>&<br>
-                Kwalitatieve Rijlessen</h2>
-                
-                    <p>
-                        Bij rijschool Nevcity kun je al voor <span class="euro">€40,-</span> per uur lessen. Ook de pakketten zijn voordeliger dan ooit!
-                    </p>      
-                </div>
-            </div>
-            <div class="about-us-wrapper">
-                <div class="about-us--images">
-                    <img  src="./img/rijschool_nevcity1.gif" alt="">
-                </div>
-                <div class="about-us-text-wrapper">
-                <h2 class="title">Spoedcursus</h2>
-                <p>
-                    Super snel je rijbewijs halen? Nevcity heeft een ervaren instructeur die je helpt om je door de drukste situaties te begeleiden en je rijbewijs
-super snel halen. 
-                </p>        
-                </div>
-            </div>
-        <!-- </div> -->
-    </section>
-
-    <section id="stats">
-        <div class="wrapper">
-            <div class="stats-wrapper">
-                <div class="stats-wrapper--stat1">
-                    <i class="fas fa-graduation-cap"></i>
-                        <span id = 'one'></span>
-                        <h2 class="stats-counter">Aantal geslaagden <br> nevcity </h2>
-                </div>
-                <div class="stats-wrapper--stat2">
-                    <i class="fas fa-business-time"></i>
-                      <span id = 'two'></span>
-                      <h2 class="stats-counter"> Aantal jaren ervaring <br> rij-instructeur </h2>
-                </div>
-                <div class="stats-wrapper--stat3">
-                    <i class="fas fa-smile"></i>
-                      <span id = 'three'></span>
-                      <h2 class="stats-counter">Tevredenheid <br> studenten</h2>
-                </div>
-            </div>
-           
-        </div>
-    </section>
-
-    <!-- <section class="passed">
-        <div class="container">
-            <div class="passed-wrapper">
-                <div class="passed--images">
-                    <img  src="./img/rijschool_nevcity6.gif" alt="">
-                </div>
-                <h2 class="title">Een paar van onze geslaagde leerlingen:</h2>
-                <div class="home__text-wrapper">
-                  <p>
-                    Moet nog gemaakt worden! Moet nog gemaakt worden! Moet nog gemaakt worden! Moet nog gemaakt worden! Moet nog gemaakt worden! Moet nog gemaakt worden! 
-                    Moet nog gemaakt worden! Moet nog gemaakt worden! Moet nog gemaakt worden! Moet nog gemaakt worden! Moet nog gemaakt worden! 
-                    Moet nog gemaakt worden! Moet nog gemaakt worden! Moet nog gemaakt worden! Moet nog gemaakt worden! Moet nog gemaakt worden! 
-                    Moet nog gemaakt worden! Moet nog gemaakt worden! Moet nog gemaakt worden! Moet nog gemaakt worden! 
-                    </p> 
-                </div>
-            </div>             
-        </div>
-    </section> -->
-
-    <section id="price-section">
-        <div class="card-wrapper">
-            <div class="price-card" id="item1">
-                <div class="plan-title">
-                    <h3>
-                        START PAKKET
-                    </h3>
-                </div>
-                <div class="price">
-                    <p>875</p>
-                </div>
-                <div class="item">
-                    <p>Aantal Rijlessen <i class="fas fa-car"></i> 20</p>
-                     
-                </div>
-                <div class="item">
-                    <p>Vaste Instructeur <i class="fas fa-check"></i> </p>
-                   
-                </div>
-                <div class="item">
-                    <p>Nieuwe Lesauto <i class="fas fa-check"></i></p>
-                     
-                </div>
-                <div class="item">
-                    <p>Vanaf 16,5 jaar <i class="fas fa-check"></i></p>
- 
-                </div>
-                <div class="item">
-                    <p>Snel Beginnen <i class="fas fa-check"></i></p>
-                </div>
-                <div class="item">
-                    <p>Gespreid Betalen <i class="fas fa-check"></i></p>
-                </div>
-                <div class="item">
-                    <p>Praktijkexamen CBR: <i class="fas fa-times"></i></p>
-                </div>
-                
-                <div class="btn-row"><a href="https://api.whatsapp.com/send?phone=31634559087&text=%20%20" class="btn-plan">Proefles Aanvragen<i class="fas fa-arrow-right"></i></a> </div>
-                
-            </div>
-            <!-- second plan -->
-            <div class="price-card" id="item2">
-                <div class="plan-title">
-                    <h3>
-                        ACTIE PAKKET
-                    </h3>
-                </div>
-                <div class="price">
-                    <p>1450</p>
-                </div>
-                <div class="item">
-                    <p>Aantal Rijlessen <i class="fas fa-car"></i> 30</p>
-                     
-                </div>
-                <div class="item">
-                    <p>Vaste Instructeur <i class="fas fa-check"></i> </p>
-                   
-                </div>
-                <div class="item">
-                    <p>Nieuwe Lesauto <i class="fas fa-check"></i></p>
-                     
-                </div>
-                <div class="item">
-                    <p>Vanaf 16,5 jaar <i class="fas fa-check"></i></p>
- 
-                </div>
-                <div class="item">
-                    <p>Snel Beginnen <i class="fas fa-check"></i></p>
-                </div>
-                <div class="item">
-                    <p>Gespreid Betalen <i class="fas fa-check"></i></p>
-                </div>
-                <div class="item">
-                    <p>Praktijkexamen CBR: <i class="fas fa-check"></i></p>
-                </div>
-                <div class="btn-row"><a href="https://api.whatsapp.com/send?phone=31634559087&text=%20%20" class="btn-plan">Proefles Aanvragen<i class="fas fa-arrow-right"></i></a> </div>
-            </div>
-            <!-- Third plan-->
-            <div class="price-card" id="item3">
-                <div class="plan-title">
-                    <h3>
-                        MASTER PAKKET
-                    </h3>
-                </div>
-                <div class="price">
-                    <p>1975</p>
-                </div>
-                <div class="item">
-                    <p>Aantal Rijlessen <i class="fas fa-car"></i> 40</p>
-                     
-                </div>
-                <div class="item">
-                    <p>Vaste Instructeur <i class="fas fa-check"></i> </p>
-                   
-                </div>
-                <div class="item">
-                    <p>Nieuwe Lesauto <i class="fas fa-check"></i></p>
-                     
-                </div>
-                <div class="item">
-                    <p>Vanaf 16,5 jaar <i class="fas fa-check"></i></p>
- 
-                </div>
-                <div class="item">
-                    <p>Snel Beginnen <i class="fas fa-check"></i></p>
-                </div>
-                <div class="item">
-                    <p>Gespreid Betalen <i class="fas fa-check"></i></p>
-                </div>
-                <div class="item">
-                    <p>Praktijkexamen CBR: <i class="fas fa-check"></i></p>
-                </div>
-                <div class="btn-row"><a href="https://api.whatsapp.com/send?phone=31634559087&text=%20%20" class="btn-plan">Proefles Aanvragen<i class="fas fa-arrow-right"></i></a> </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- <section id="students">
-        <div class='container'>
-            <div class="carousel-wrapper">
-                <h2>Voorbeelden van een paar van onze geslaagde leerlingen!</h2>
-                <div class='carouselContainer'></div>
-            </div>
-        </div>
-    </section> -->
-    <section id="students">
-        <h2>Voorbeelden van een paar van onze geslaagde leerlingen!</h2>
-        <div id="succeeded-students">
-            <div class="slider-container">
-                <div class="slider">
-                    <div class="slide">
-                        <img src="./img/nevc1.jpg" alt="" />
-                      </div>
-                      <div class="slide">
-                        <img src="./img/nevc2.jpg" alt="" />
-                      </div>
-                      <div class="slide">
-                        <img src="./img/nevc3.jpg" alt="" />
-                      </div>
-                      <div class="slide">
-                        <img src="./img/nevc4.jpg" alt="" />
-                      </div>
-                      <div class="slide">
-                        <img src="./img/nevc5.jpg" alt="" />
-                      </div>
-                      <div class="slide">
-                        <img src="./img/nevc6.jpg" alt="" />
-                      </div>
-                      <div class="slide">
-                        <img src="./img/nevc7.jpg" alt="" />
-                      </div>
-                      <div class="slide">
-                        <img src="./img/nevc8.jpg" alt="" />
-                      </div>
-                      <div class="slide">
-                        <img src="./img/nevc9.jpg" alt="" />
-                      </div>
-                      <div class="slide">
-                        <img src="./img/nevc10.jpg" alt="" />
-                      </div>
-                      <div class="slide">
-                        <img src="./img/nevc11.jpg" alt="" />
-                      </div>
-                      <div class="slide">
-                        <img src="./img/nevc12.jpg" alt="" />
-                      </div>
-                      <div class="slide">
-                        <img src="./img/nevc13.jpg" alt="" />
-                      </div>
-                      <div class="slide">
-                        <img src="./img/nevc14.jpg" alt="" />
-                      </div>
-                      <div class="slide">
-                        <img src="./img/nevc15.jpg" alt="" />
-                      </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- <section class="price">
-        <div class="container">
-            <div class="price-wrapper">
-                
-                <h2 class="title">Lespakketten </h2>
-                <h2 class="title">Moet Nog Gemaakt Worden </h2>
-                <div class="home__text-wrapper">
-                  <p>
-                    Moet Nog Gemaakt Worden, ben bezi. Moet Nog Gemaakt Worden, ben bezi. Moet Nog Gemaakt Worden, ben bezi. Moet Nog Gemaakt Worden, ben bezi. 
-                    Moet Nog Gemaakt Worden, ben bezi. Moet Nog Gemaakt Worden, ben bezi. Moet Nog Gemaakt Worden, ben bezi. Moet Nog Gemaakt Worden, ben bezi. 
-                    Moet Nog Gemaakt Worden, ben bezi. Moet Nog Gemaakt Worden, ben bezi. Moet Nog Gemaakt Worden, ben bezi. Moet Nog Gemaakt Worden, ben bezi. 
-                    Moet Nog Gemaakt Worden, ben bezi. Moet Nog Gemaakt Worden, ben bezi. Moet Nog Gemaakt Worden, ben bezi. Moet Nog Gemaakt Worden, ben bezi. 
-                    Moet Nog Gemaakt Worden, ben bezi. Moet Nog Gemaakt Worden, ben bezi. Moet Nog Gemaakt Worden, ben bezi. Moet Nog Gemaakt Worden, ben bezi.      
-                  </p> 
-                </div>
-                <div class="about-us--images">
-                    <img  src="./img/rijschool_nevcity5.gif" alt="">
-                </div>
-            </div>             
-        </div>
-    </section>
-
-     -->
-
-    <section class="ellipsis">
-        <div class="ellipsis-wrapper">
-            <input type="checkbox" name="" id="myEllipsisCheckbox" >
-            <div class="bg-overlay"></div>
-            <div class="ellipsis-h">
-                <i class="fas fa-ellipsis-h"></i>
-            </div>
-            
-            <div class="times">
-                <i class="fas fa-times"></i>
-            </div>
-            <div class="fixed-contact-icons">
-                    <div class="whatsapp">
-                        <a href="https://api.whatsapp.com/send?phone=31634559087&text=%20%20"">
-                            <i class="fab fa-whatsapp circle whatsapp-fixed"></i>
-                        </a>
-                    </div>
-                    <div class="phone">
-                        <a href="tel:+31634559087">
-
-                            <i class="fas fa-phone circle"></i>
-                        </a>
-                    </div>
-                    
-                <div class="instagram">
-                    <i class="fab fa-instagram circle"></i>
-                </div>
-                <div class="facebook">
-                    <i class="fab fa-facebook circle"></i>
-                </div>
-                <div class="email">
-                    <i class="fas fa-envelope circle"></i>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="footer">
-        <div class="footer-container">
-            <div class="footer-wrapper">
-                <!-- <div class="text-wrapper"> -->
-                  <!-- <div class="contact-form">
-                        <form action="">
-                            <input type="text" class="name" placeholder="Uw Naam" required>
-                            <input type="tel" class="tel" placeholder="Uw mobiele nummr" required>
-                            <input type="email" class="e-mail" placeholder="Uw e-mail">
-                            <textarea class="bericht" placeholder="Uw bericht" rows="4" cols="50"> </textarea>
-                            <button type="submit" >Verzenden</button> 
-                        </form>
-                    </div> -->
-                    
-                    <h3>My Google Maps Demo</h3>
-    <!--The div element for the map -->
-    <div id="map"></div>
-
-                <div class="footer-info">
-
-                    <div class="text-wrapper">
-                        <h2>Rjschool Nevcity</h2>
+                    <div class="about-us__text-wrapper"> 
+                        <h2 class="about-us__title">Rijschool Nevcity</h2>
                       <p>
-                        Moet Nog Gemaakt Worden, ben bezi. Moet Nog Gemaakt Worden, ben bezi. Moet Nog Gemaakt Worden, ben bezi. 
-
+                        Rijschool Nevcity is dé rijschool in Amsterdam en omgeving.
+                        Wij geven zowel door de weeks als in het weekend les.
+                        Haal nu gemakkelijk en snel je rijbewijs bij NevCity rijschool!
+                        Vraag nu bij ons gratis en vrijblijvend intakegesprek en proefles aan.
                       </p> 
                     </div>
-                    <div class="text-wrapper">
-                        <h2>Over Ons</h2>
-                    <p>
-                        <a href="#about-us">Rijschool Nevcity</a>
-                    </p> 
-                    <p>
-                        <a href="#students">Geslaagden</a>
-                    </p> 
-                    <p>
-                        <!-- <a href="mailto:info@nevcity.nl">Proefles</a> -->
-                        <a href="https://api.whatsapp.com/send?phone=31634559087&text=%20%20">Proefles</a>
-                    </p> 
+                </div>
+                <div class="about-us__card">
+                    <div class="about-us__image">
+                        <img  src="./img/rijschool_nevcity3.gif" alt="">
                     </div>
-                    <div class="text-wrapper">
-                        <h2>Contactgegevens</h2>
-                      <p>
+                    <div class="about-us__text-wrapper"> 
+                    <h2 class="about-us__title">Goedkope <br>&<br>
+                    Kwalitatieve Rijlessen</h2>         
                         <p>
-                            Masthof 128
-                        </p>
-                        <p>
-                            1034 NJ Amsterdam
-                        </p>
-                        <p>
-                            06 34559087
-                        </p>
-                        <p>
-                            info@nevcity.nl
-                        </p>
-                      </p> 
-                    </div>
-
-                    <div class="text-wrapper">
-                        <h2>Social Media Links</h2>
-                     
-                        <ul class="footer-social-links">
-                            <li><a href="https://www.facebook.com/rijschoolnevcity/" target="_blank"><i class="fab fa-facebook"></i></a></li>
-                            <li><a href="https://www.instagram.com/rijschool_nevcity/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                            <li><a href="mailto:info@nevcity.nl"><i class="fas fa-envelope"></i></a></li>
-                            <li><a href="https://api.whatsapp.com/send?phone=31634559087&text=%20%20" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
-                        </ul>
-                      <p class="copyright">
-                          <h8>developed by <a href="https://www.frontendprojects.nl/" target="_blank" >frontendprojects.nl</a></h8>
-                      </p>
+                            Bij rijschool Nevcity kun je al voor <span class="euro">€40,-</span> per uur lessen. Ook de pakketten zijn voordeliger dan ooit!
+                        </p>      
                     </div>
                 </div>
-                <!-- </div> -->
+                <div class="about-us__card">
+                    <div class="about-us__image">
+                        <img  src="./img/rijschool_nevcity1.gif" alt="">
+                    </div>
+                    <div class="about-us__text-wrapper">
+                    <h2 class="about-us__title">Spoedcursus</h2>
+                    <p>
+                        Super snel je rijbewijs halen? Nevcity heeft een ervaren instructeur die je helpt om je door de drukste situaties te begeleiden en je rijbewijs super snel halen. 
+                    </p>        
+                    </div>
+        </section>
+        <section class="stats">
+                <div class="stats__wrapper">
+                    <div class="stats__card1">
+                        <i class="fas fa-graduation-cap"></i>
+                            <span class = 'stats__counter-one'></span>
+                            <h2 class="stats__title">Aantal geslaagden <br> nevcity </h2>
+                    </div>
+                    <div class="stats__card2">
+                        <i class="fas fa-business-time"></i>
+                          <span class = 'stats__counter-two'></span>
+                          <h2 class="stats__title"> Aantal jaren ervaring <br> rij-instructeur </h2>
+                    </div>
+                    <div class="stats__card3">
+                        <i class="fas fa-smile"></i>
+                          <span class = 'stats__counter-three'></span>
+                          <h2 class="stats__title">Tevredenheid <br> studenten</h2>
+                    </div>
+                </div>
+        </section>
+        <section class="price-section">
+            <div class="price-section__card-wrapper">
+                <div class="price-section__card-1" id="item1">
+                    <div class="price-section__title">
+                        <h3>
+                            START PAKKET
+                        </h3>
+                    </div>
+                    <div class="price-section__price">
+                        <p>875</p>
+                    </div>
+                    <div class="price-section__item">
+                        <p>Aantal Rijlessen <i class="fas fa-car"></i> 20</p>
+                    </div>
+                    <div class="price-section__item">
+                        <p>Vaste Instructeur <i class="fas fa-check"></i> </p>
+                    </div>
+                    <div class="price-section__item">
+                        <p>Nieuwe Lesauto <i class="fas fa-check"></i></p>
+                    </div>
+                    <div class="price-section__item">
+                        <p>Vanaf 16,5 jaar <i class="fas fa-check"></i></p>
+                    </div>
+                    <div class="price-section__item">
+                        <p>Snel Beginnen <i class="fas fa-check"></i></p>
+                    </div>
+                    <div class="price-section__item">
+                        <p>Gespreid Betalen <i class="fas fa-check"></i></p>
+                    </div>
+                    <div class="price-section__item">
+                        <p>Praktijkexamen CBR: <i class="fas fa-times"></i></p>
+                    </div>
+                    <div class="price-section__btn"><a href="https://api.whatsapp.com/send?phone=31634559087&text=%20%20" class="btn-plan">Proefles Aanvragen<i class="fas fa-arrow-right"></i></a> </div>
+                </div>
+                <!-- second plan -->
+                <div class="price-section__card-2" id="item2">
+                    <div class="price-section__title">
+                        <h3>
+                            ACTIE PAKKET
+                        </h3>
+                    </div>
+                    <div class="price-section__price">
+                        <p>1450</p>
+                    </div>
+                    <div class="price-section__item">
+                        <p>Aantal Rijlessen <i class="fas fa-car"></i> 30</p>
+                    </div>
+                    <div class="price-section__item">
+                        <p>Vaste Instructeur <i class="fas fa-check"></i> </p>
+                    </div>
+                    <div class="price-section__item">
+                        <p>Nieuwe Lesauto <i class="fas fa-check"></i></p>
+                    </div>
+                    <div class="price-section__item">
+                        <p>Vanaf 16,5 jaar <i class="fas fa-check"></i></p>
+                    </div>
+                    <div class="price-section__item">
+                        <p>Snel Beginnen <i class="fas fa-check"></i></p>
+                    </div>
+                    <div class="price-section__item">
+                        <p>Gespreid Betalen <i class="fas fa-check"></i></p>
+                    </div>
+                    <div class="price-section__item">
+                        <p>Praktijkexamen CBR: <i class="fas fa-check"></i></p>
+                    </div>
+                    <div class="price-section__btn"><a href="https://api.whatsapp.com/send?phone=31634559087&text=%20%20" class="btn-plan">Proefles Aanvragen<i class="fas fa-arrow-right"></i></a> </div>
+                </div>
+                <!-- Third plan-->
+                <div class="price-section__card-3" id="item3">
+                    <div class="price-section__title">
+                        <h3>
+                            MASTER PAKKET
+                        </h3>
+                    </div>
+                    <div class="price-section__price">
+                        <p>1975</p>
+                    </div>
+                    <div class="price-section__item">
+                        <p>Aantal Rijlessen <i class="fas fa-car"></i> 40</p>
+                    </div>
+                    <div class="price-section__item">
+                        <p>Vaste Instructeur <i class="fas fa-check"></i> </p>
+                    </div>
+                    <div class="price-section__item">
+                        <p>Nieuwe Lesauto <i class="fas fa-check"></i></p>
+                    </div>
+                    <div class="price-section__item">
+                        <p>Vanaf 16,5 jaar <i class="fas fa-check"></i></p>
+                    </div>
+                    <div class="price-section__item">
+                        <p>Snel Beginnen <i class="fas fa-check"></i></p>
+                    </div>
+                    <div class="price-section__item">
+                        <p>Gespreid Betalen <i class="fas fa-check"></i></p>
+                    </div>
+                    <div class="price-section__item">
+                        <p>Praktijkexamen CBR: <i class="fas fa-check"></i></p>
+                    </div>
+                    <div class="price-section__btn"><a href="https://api.whatsapp.com/send?phone=31634559087&text=%20%20" class="btn-plan">Proefles Aanvragen<i class="fas fa-arrow-right"></i></a> </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+        <section class="students">
+            <h2 class="students_title">Voorbeelden van een paar van onze geslaagde leerlingen!</h2>
+            <div class="students__wrapper">
+                <div class="students__slider-container">
+                    <div class="students__slider">
+                        <div class="students__slide">
+                            <img src="./img/nevc1.jpg" alt="" />
+                          </div>
+                          <div class="students__slide">
+                            <img src="./img/nevc2.jpg" alt="" />
+                          </div>
+                          <div class="students__slide">
+                            <img src="./img/nevc3.jpg" alt="" />
+                          </div>
+                          <div class="students__slide">
+                            <img src="./img/nevc4.jpg" alt="" />
+                          </div>
+                          <div class="students__slide">
+                            <img src="./img/nevc5.jpg" alt="" />
+                          </div>
+                          <div class="students__slide">
+                            <img src="./img/nevc6.jpg" alt="" />
+                          </div>
+                          <div class="students__slide">
+                            <img src="./img/nevc7.jpg" alt="" />
+                          </div>
+                          <div class="students__slide">
+                            <img src="./img/nevc8.jpg" alt="" />
+                          </div>
+                          <div class="students__slide">
+                            <img src="./img/nevc9.jpg" alt="" />
+                          </div>
+                          <div class="students__slide">
+                            <img src="./img/nevc10.jpg" alt="" />
+                          </div>
+                          <div class="students__slide">
+                            <img src="./img/nevc11.jpg" alt="" />
+                          </div>
+                          <div class="students__slide">
+                            <img src="./img/nevc12.jpg" alt="" />
+                          </div>
+                          <div class="students__slide">
+                            <img src="./img/nevc13.jpg" alt="" />
+                          </div>
+                          <div class="students__slide">
+                            <img src="./img/nevc14.jpg" alt="" />
+                          </div>
+                          <div class="students__slide">
+                            <img src="./img/nevc15.jpg" alt="" />
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="ellipsis">
+            <div class="ellipsis__wrapper">
+                <input type="checkbox" name="" class="ellipsis__checkbox" >
+                <div class="ellipsis__bg-overlay"></div>
+                <div class="ellipsis__ellipsis-h">
+                    <i class="fas fa-ellipsis-h"></i>
+                </div>
+                <div class="ellipsis__times">
+                    <i class="fas fa-times"></i>
+                </div>
+                <div class="ellipsis__icons">
+                        <div class="ellipsis__whatsapp">
+                            <a href="https://api.whatsapp.com/send?phone=31634559087&text=%20%20"">
+                                <i class="fab fa-whatsapp circle whatsapp-fixed"></i>
+                            </a>
+                        </div>
+                        <div class="ellipsis__phone">
+                            <a href="tel:+31634559087">
+                                <i class="fas fa-phone circle"></i>
+                            </a>
+                        </div>                 
+                    <div class="ellipsis__instagram">
+                        <i class="fab fa-instagram circle"></i>
+                    </div>
+                    <div class="ellipsis__facebook">
+                        <i class="fab fa-facebook circle"></i>
+                    </div>
+                    <div class="ellipsis__email">
+                        <i class="fas fa-envelope circle"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <section>
+            <div class="footer">
+                <div class="footer__footer-wrapper">
+                        <h3>My Google Maps Demo</h3>
+        <div id="map"></div>
+                    <div class="footer__footer-info">
+                        <div class="footer__text-wrapper">
+                            <h2>Rjschool Nevcity</h2>
+                          <p>
+                            Moet Nog Gemaakt Worden, ben bezi. Moet Nog Gemaakt Worden, ben bezi. Moet Nog Gemaakt Worden, ben bezi. 
+                          </p> 
+                        </div>
+                        <div class="footer__text-wrapper">
+                            <h2>Over Ons</h2>
+                        <p>
+                            <a href="#about-us">Rijschool Nevcity</a>
+                        </p> 
+                        <p>
+                            <a href="#students">Geslaagden</a>
+                        </p> 
+                        <p>
+                            <!-- <a href="mailto:info@nevcity.nl">Proefles</a> -->
+                            <a href="https://api.whatsapp.com/send?phone=31634559087&text=%20%20">Proefles</a>
+                        </p> 
+                        </div>
+                        <div class="footer__text-wrapper">
+                            <h2>Contactgegevens</h2>
+                          <p>
+                            <p>
+                                Masthof 128
+                            </p>
+                            <p>
+                                1034 NJ Amsterdam
+                            </p>
+                            <p>
+                                06 34559087
+                            </p>
+                            <p>
+                                info@nevcity.nl
+                            </p>
+                          </p> 
+                        </div>
+                        <div class="footer__text-wrapper">
+                            <h2>Social Media Links</h2>
+                            <ul class="footer-social-links">
+                                <li><a href="https://www.facebook.com/rijschoolnevcity/" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                                <li><a href="https://www.instagram.com/rijschool_nevcity/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="mailto:info@nevcity.nl"><i class="fas fa-envelope"></i></a></li>
+                                <li><a href="https://api.whatsapp.com/send?phone=31634559087&text=%20%20" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+                            </ul>
+                          <p class="copyright">
+                              <h8>developed by <a href="https://www.frontendprojects.nl/" target="_blank" >frontendprojects.nl</a></h8>
+                          </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
 </div>
     <script src="./js/app.js"></script>
     <script src="./js/hamburger.js"></script>

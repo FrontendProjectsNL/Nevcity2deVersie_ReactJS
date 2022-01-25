@@ -15,7 +15,7 @@
   visibility: hidden;
   opacity: 0;
 } */
-.fixed-contact-icons div {
+.ellipsis__icons div {
   position: fixed;
   /* bottom: 90px;
   right: 35px;
@@ -27,28 +27,28 @@
   opacity: 0;
 }
 
-.fixed-contact-icons div:nth-of-type(5) {
+.ellipsis__icons div:nth-of-type(5) {
   bottom: 110px;
   right: 35px;
 }
-.fixed-contact-icons div:nth-of-type(4) {
+.ellipsis__icons div:nth-of-type(4) {
   bottom: 165px;
   right: 35px;
 }
-.fixed-contact-icons div:nth-of-type(3) {
+.ellipsis__icons div:nth-of-type(3) {
   bottom: 215px;
   right: 35px;
 }
-.fixed-contact-icons div:nth-child(2) {
+.ellipsis__icons div:nth-child(2) {
   bottom: 265px;
   right: 35px;
 }
-.fixed-contact-icons div:nth-of-type(1) {
+.ellipsis__icons div:nth-of-type(1) {
   bottom: 315px;
   right: 35px;
 }
 
-.ellipsis-wrapper {
+.ellipsis__wrapper {
   position: fixed;
   font-size: 35px;
   /* width: 100vw;
@@ -57,7 +57,7 @@
   bottom: 0;
   right: 0;
 }
-#myEllipsisCheckbox {
+.ellipsis__checkbox {
   position: fixed;
   font-size: 35px;
   z-index: 1001;
@@ -69,7 +69,7 @@
   cursor: pointer;
 }
 
-.times {
+.ellipsis__times {
   font-size: 38px;
   color: #e6e6e6;
   position: fixed;
@@ -80,7 +80,7 @@
   opacity: 0;
 }
 
-.ellipsis-h {
+.ellipsis__ellipsis-h {
   display: inline-block;
   font-size: 38px;
   color: var(--hamburger-menu-color);
@@ -91,7 +91,7 @@
   z-index: 1000;
   animation: float-animation 12000ms ease-in-out 6000ms infinite;
 }
-.bg-overlay {
+.ellipsis__bg-overlay {
   position: absolute;
   top: 0%;
   left: 0%;
@@ -103,12 +103,12 @@
   transition: opacity 200ms;
 }
 
-#myEllipsisCheckbox:checked ~ .ellipsis-wrapper {
+.ellipsis__checkbox:checked ~ .ellipsis__wrapper {
   width: 100vw;
   height: 100vh;
 }
 
-#myEllipsisCheckbox:checked + .bg-overlay {
+.ellipsis__checkbox:checked + .bg-overlay {
   opacity: 1;
   top: -200%;
   left: -200%;
@@ -116,11 +116,11 @@
   height: 400%
 }
 
-#myEllipsisCheckbox:checked ~ .ellipsis-h {
+.ellipsis__checkbox:checked ~ .ellipsis__ellipsis-h {
   opacity: 0;
 }
 
-#myEllipsisCheckbox:checked ~ .times {
+.ellipsis__checkbox:checked ~ .ellipsis__times {
   opacity: 1;
 }
 
@@ -131,91 +131,35 @@
     transform: translateY(-20px) scale(1);    
   } */
 
-#myEllipsisCheckbox:checked ~ .fixed-contact-icons div:nth-of-type(5) {
+.ellipsis__checkbox:checked ~ .ellipsis__icons div:nth-of-type(5) {
   opacity: 1;
   animation: iconScale 600ms ease-in-out forwards;
   animation-delay: 2800ms;
 }
 
-#myEllipsisCheckbox:checked ~ .fixed-contact-icons div:nth-of-type(4) {
+.ellipsis__checkbox:checked ~ .ellipsis__icons div:nth-of-type(4) {
   opacity: 1;
   animation: iconScale 600ms ease-in-out forwards;
   animation-delay: 2100ms;
 }
 
-#myEllipsisCheckbox:checked ~ .fixed-contact-icons div:nth-of-type(3) {
+.ellipsis__checkbox:checked ~ .ellipsis__icons div:nth-of-type(3) {
   opacity: 1;
   animation: iconScale 600ms ease-in-out forwards;
   animation-delay: 1400ms;
 }
 
-#myEllipsisCheckbox:checked ~ .fixed-contact-icons div:nth-child(2) {
+.ellipsis__checkbox:checked ~ .ellipsis__icons div:nth-child(2) {
   opacity: 1;
   animation: iconScale 600ms ease-in-out forwards;
   animation-delay: 700ms;
 }
 
-#myEllipsisCheckbox:checked ~ .fixed-contact-icons div:nth-of-type(1) {
+.ellipsis__checkbox:checked ~ .ellipsis__icons div:nth-of-type(1) {
   /* transition: transform 3000ms ease-in-out, opacity 300ms ease-in-out; */
   opacity: 1;
   animation: iconScale 600ms ease-in-out forwards;
 }
-
-/* 
-  .fa-facebook {
-    color: #fff;
-    font-size: 22px;
-  }
-  .facebook .fa-circle {
-    color: #4267b2;
-    font-size: 44px;
-  }
-  
-  .instagram .fa-circle {
-    color: transparent;
-    background: radial-gradient(
-      circle at 30% 107%,
-      #fdf497 0%,
-      #fdf497 5%,
-      #fd5949 45%,
-      #d6249f 60%,
-      #285aeb 90%
-    );
-    background: -webkit-radial-gradient(
-      circle at 30% 107%,
-      #fdf497 0%,
-      #fdf497 5%,
-      #fd5949 45%,
-      #d6249f 60%,
-      #285aeb 90%
-    );
-    background-clip: text;
-    -webkit-background-clip: text;
-  }
-  
-  .whatsapp .fa-circle {
-    color: transparent;
-    background: linear-gradient(#25d366, #25d366) 14% 84%/16% 16% no-repeat,
-      radial-gradient(#25d366 60%, transparent 0);
-  }
-  
-  .phone-icon .fa-circle {
-    color: transparent;
-    background: radial-gradient(#00cc00 60%, transparent 0);
-  }
-  
-  .email-icon .fa-circle {
-    color: transparent;
-    background-color: #ea4335;
-    background-clip: text;
-    -webkit-background-clip: text;
-    
-  }
-  
-  .whatsapp {
-    font-size: 22px;
-  } */
-
 .circle {
   border-radius: 50%;
   margin: 0.15em;
@@ -256,7 +200,7 @@
 
   padding: 10px;
 }
-.whatsapp .circle {
+.ellipsis__whatsapp .circle {
   font-size: 27px;
 }
 .fa-whatsapp {
